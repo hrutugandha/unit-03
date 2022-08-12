@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            height: 700px;
+            width: 100% !important;
+            border: 1px solid red;
+        }
+        #sidebar{
+            height: 50%;
+            flex: 2;
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+        }
+        #main{
+            flex: 8;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+        }
+        #sidebar > div{
+            flex: 1;
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div onclick="window.location.href='index.html'">Menu</div>
+            <div>Login</div>
+            <div>Signup</div>
+            <input type="text" id="searchbar">
+            <div>News</div>
+            <div>Random</div>
+        </div>
+        <div id="main"></div>
+    </div>
+</body>
+</html>
+<script src="main.js">
+
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+       <div id="container" style="background-image: url(https://images.unsplash.com/photo-1613376023733-0a73315d9b06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+            <!--------------------Navbar------------------>
+            <nav id="navbar">
+                <div class="logo" class="item-1" style="display:flex; font-size: 16px; background-color: #cf3f1c; " onclick="window.location.href='home.html'" class="item"><img src="https://th.bing.com/th/id/OIP.aaQP2oFTCNw_UE4wd_0oXgHaG_?w=184&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt=""><h3>anime.net</h3></div>
+                <div class="item-2"></div>
+                <div class="item" class="item-2" onclick="window.location.href='index.html'"><h3>Home</h3></div>
+                <div class="item" class="item-3" onclick="window.location.href='login.html'"><h3>Login</h3></div>
+                <div class="item" class="item-4" onclick="window.location.href='signup.html'"><h3>Signup</h3></div>
+            </nav>
+            <!---------------------Form-------------------->
+           <form>
+                <h1 style="text-align:center; margin: 0px; color: white;">Signup</h1>
+                <div id="signup-form-div">
+                    <input class="bgColor" id="email" type="text" placeholder="Enter email address" />
+                    <input class="bgColor" id="pass" type="password" placeholder="Enter password" />
+                    <input class="bgColor" id="user" type="text" placeholder="Enter username" />
+                    <input class="bgColor" id="mbl" type="number" placeholder="Enter mobile number" />
+                    <input class="bgColor" id="submit" type="submit" value="Sign Up" style="margin-left: 36px;" />
+                </div>
+           </form>
+       </div>
+    </body>
+</html>
+<script src="signup.js">
+</script>

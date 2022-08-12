@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 700px;
+            width: 100%;
+            display: flex;
+            border: 1px solid red;
+        }
+        #main{
+            height: 400px;
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let parent = document.getElementById("main")
+
+    async function getInfo(){
+        try{
+            let res = await fetch(`https://api.unsplash.com/photos/random?client_id=5VOulHaa8LTvlW6KES4GX0FR7ivMWaEqCMZWRnAAqPc`);
+            let infoData = await res.json();
+
+            appendInfo(infoData);
+            return infoData;
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    getInfo();
+
+    function appendInfo(elem){
+
+        console.log(elem);
+        let div = document.createElement('div');
+        div.id = 'picture';
+
+        let img = document.createElement('img');
+        img.src = elem.urls.small;
+
+        let user = document.createElement("p");
+        user.innerHTML = elem.user.name;
+
+        let location = document.createElement("p");
+        location.innerHTML = elem.user.location;
+
+        div.append(img,user,location);
+        parent.append(div);
+    }
+</script>

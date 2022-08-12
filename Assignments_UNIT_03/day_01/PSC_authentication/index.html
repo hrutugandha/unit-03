@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    #container {
+      display: flex;
+    }
+
+    form {
+      width: 10%;
+    }
+
+    input {
+      margin-top: 5%;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div id="register-form">
+        <h1>Register</h1>
+
+        <form>
+          <input type="text" id="name" placeholder="Name" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="password" id="password" placeholder="Password" />
+          <input type="text" id="username" placeholder="Username" />
+          <input type="number" id="mobile" placeholder="Number" />
+          <input type="text" id="description" placeholder="Description" />
+        </form>
+
+        <button onclick="Register()">Register</button>
+      </div>
+
+      <div id="login-form">
+        <h1>Login</h1>
+        <form>
+          <input type="text" id="login-username" placeholder="Name" />
+          <input type="text" id="login-password" placeholder="Password" />
+        </form>
+
+        <button onclick="Login()">Login</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // create registration form.
+//register api link - https://masai-api-mocker.herokuapp.com/auth/register
+// login api link - https://masai-api-mocker.herokuapp.com/auth/login
+console.log('hello')
+
+let Register = async () => {
+    try{
+        let register_data = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            username: document.getElementById('username').value,
+            mobile: document.getElementById('mobile').value,
+            description: document.getElementById('description').value,
+        };
+
+        register_data = JSON.stringify(register_data);
+        let res = await fetch(`https://masai-api-mocker.herokuapp.com/auth/register`,{
+
+        method: 'POST',
+        body: register_data,
+        headers: {
+            "Content-type":"application/json",
+        },
+
+        });
+        let data = res.json();
+        console.log("data:", data);
+    }
+    catch(err){
+        console.log(err)
+    };
+}
+
+    let Login = async () => {
+        try {
+            let login_data = {
+                username: document.getElementById('login-username').value,
+                password: document.getElementById('login-password').value,
+            };
+
+            let login_data_json = JSON.stringify(login_data);
+            let res = await fetch(`https://masai-api-mocker.herokuapp.com/auth/login`, {
+                method: 'POST',
+                body: login_data_json,
+                headers: {
+                    "Content-type": "application/json"
+                },
+            });
+
+            let data = await res.json();
+            console.log(data);
+
+            getUser(login_data.username, data.token);
+
+        }
+        catch (err) {
+            console.log(err);
+        }
+
+    }
+
+    let getUser = async (username, token) => {
+        try{
+            let res = await fetch(`https://masai-api-mocker.herokuapp.com/api/users/${username}`,{
+                headers: {
+                    "Content-type": "application/json",
+                    Authorization: `Bearer ${token}`
+                },
+            });
+            let data = await res.json();
+            console.log(data)
+        }catch(err){
+            console.log(err);
+        }
+    }
+
+</script>

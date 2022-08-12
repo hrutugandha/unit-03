@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+        <div id="container" style="background-image: url(https://images.unsplash.com/photo-1613376023733-0a73315d9b06?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+            
+         <!--------------------Navbar------------------>
+         <nav id="navbar">
+            <div class="logo" class="item-1" onclick="window.location.href='index.html'" class="item"><img src="https://th.bing.com/th/id/OIP.aaQP2oFTCNw_UE4wd_0oXgHaG_?w=184&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt=""><h3 style="font-size: 16px; text-align: center; margin:auto">anime.net</h3></div>
+            <div class="item-2"></div>
+            <div class="item" class="item-2" onclick="window.location.href='index.html'"><h3>home</h3></div>
+            <div class="item" class="item-3" onclick="window.location.href='login.html'"><h3>login</h3></div>
+            <div class="item" class="item-4" onclick="window.location.href='signup.html'"><h3>signup</h3></div>
+        </nav>
+        <div id="login-form-div">
+
+            <form>
+                <h1 style="text-align:center; color: white; padding: 10px; margin: 20 0 0 0;">Login</h1>
+                <div id="signup-form-div">
+                    <input id="user" type="text" placeholder="Enter username" />
+                    <input id="pass" type="password" placeholder="Enter password" />
+                    <input id="submit" type="submit" value="login" style="margin-left: 30px" />
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
+<script src="login.js"></script>

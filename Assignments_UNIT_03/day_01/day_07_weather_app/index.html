@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<link rel="stylesheet" href="weather.css">
+<style>
+    .gmap_canvas {
+        overflow: hidden;
+        background: none !important;
+        height: 500px;
+        width: 600px;
+    }
+
+    .mapouter {
+        position: relative;
+        text-align: right;
+        height: 500px;
+        width: 600px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Weather </h1>
+            <img src="https://img.icons8.com/clouds/100/000000/partly-cloudy-day.png" />
+        </div>
+        <div id="img">
+            <div id="searchbutton">
+                <div id="searchbar" class="searchbar">
+                    <input type="text" id="city" placeholder="Search Your City...">
+                    <button onclick="getWeather()" id="button">Search</button>
+                </div>
+            </div>
+            <div id="weather">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe id="gmap_canvas" frameborder="0" scrolling="no" src=""></iframe>
+                        <a href="https://www.whatismyip-address.com"></a><br></div>
+                </div>
+            </div>
+        </div>
+        <div id="head" style="  background-color: #ffcfd2; padding:  12px 0px 12px 30px">
+            <h1>Forecast:</h1>
+        </div>
+        <div id="forecast">
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="weatherapp.js"></script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="start">
+            <div id="menu-icon">
+                <img  src="https://img.icons8.com/ios-glyphs/2x/ffffff/menu.png" alt="">
+            </div>
+            <div id="youtube-icon">
+                <img src="https://img.icons8.com/color/2x/youtube-play.png" alt="">
+                <img src="https://img.icons8.com/color/2x/youtube-play.png" alt="">
+            </div>
+        </div>
+        <div id="emptyDiv"></div>
+        <div id="centre">
+            <div id="searchbar">
+                <input type="text" id="search" placeholder=" Search..." />
+            </div>
+            <div id="search-icon">
+               <button onclick="searchVideos()" >Search</button>
+            </div>
+        </div>
+        <div id="emptyDiv"></div>
+        <div id="end">
+            <div id="videocam">
+                <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/2x/ffffff/external-video-camera-interface-kiranshastry-solid-kiranshastry.png" alt="">
+            </div>
+            <div id="boxicon">
+                <img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/2x/ffffff/external-grid-alignment-and-tools-kiranshastry-solid-kiranshastry-1.png" alt="">
+            </div>
+            <div id="bellicon">
+                <img src="https://img.icons8.com/material/344/ffffff/bell--v1.png" alt="">
+            </div>
+            <div id="pofileimg">
+                <img src="https://img.icons8.com/ios-glyphs/344/ffffff/gender-neutral-user.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="body">
+        <div id="sidenav">
+            <div id="item-01" class="item" style=" margin: 0px 0px 0px 30px">
+                <div id="homeicon" class="icon" >
+                    <img src="https://img.icons8.com/material-rounded/344/ffffff/home.png" alt="">
+                    <h4 style="margin: 0px; margin-right: 98px;">Home</h4>
+                </div>
+                <div id="exploreicon" class="icon">
+                    <img src="https://img.icons8.com/external-bearicons-glyph-bearicons/2x/ffffff/external-Explore-social-media-bearicons-glyph-bearicons.png" alt="">
+                    <h4 style="margin: 0px; margin-right: 84px;">Explore</h4>
+                </div>
+                <div id="subicon" class="icon">
+                    <img src="https://img.icons8.com/ios-glyphs/344/ffffff/video-playlist.png" alt="">
+                    <h4 style="margin: 0px; margin-right: 38px;">Subscriptions</h4>
+                </div>
+                <hr style="color: #aaa9a6;width: 200px; background-color: #aaa9a6;height: -10px;">
+            </div>
+            <div id="item-02" class="item" style=" margin: 0px 0px 0px 16px">
+                <div id="libicon">
+                    <img src="https://img.icons8.com/material-rounded/2x/ffffff/video-playlist.png" alt="">
+                    <h4>Library</h4>
+                </div>
+                <div id="history">
+                    <img src="https://img.icons8.com/material-rounded/2x/ffffff/time-machine.png" alt="">
+                    <h4>History</h4>
+                </div>
+                <div id="yourVid">
+                    <img src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/2x/ffffff/external-youtube-offers-videos-and-music-and-original-content-logo-bold-tal-revivo.png" alt="">
+                    <h4>Your videos</h4>
+                </div>
+                <div id="watchlater">
+                    <img src="https://img.icons8.com/windows/2x/ffffff/clock--v3.png" alt="">
+                    <h4 >Watch later</h4>
+                </div>
+                <div id="likedVid">
+                    <img src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/2x/ffffff/external-like-feedback-kmg-design-detailed-outline-kmg-design.png" alt="">
+                    <h4>Liked videos</h4>
+                </div>
+            </div>
+            <hr style="color: #aaa9a6;width: 200px; background-color: #aaa9a6;height: -10px;">
+            <div id="item-03" class="item" style=" margin: 0px 0px 0px 16px">
+                <h2 style="margin: 0px 0px 0px 20px; font-size:large;color:#545047">More from youtube</h2>
+                <div id="libicon"> 
+                    <img src="https://img.icons8.com/nolan/2x/ffffff/youtube-play.png" alt="">
+                    <h4>YouTube Premium</h4>
+                </div>
+                <div id="history" style="margin: 0px 0px 0px 26px;">
+                    <img src="https://img.icons8.com/external-outline-juicy-fish/2x/ffffff/external-film-film-making-outline-outline-juicy-fish-3.png" alt="">
+                    <h4>Movies</h4>
+                </div>
+                <div id="yourVid" style="margin: 0px 0px 0px 26px;">
+                    <img src="https://img.icons8.com/material-outlined/344/ffffff/virtual-reality.png" alt="">
+                    <h4>Gaming</h4>
+                </div>
+                <div id="watchlater" style="margin: 0px 0px 0px 26px;">
+                    <img src="https://img.icons8.com/material-outlined/2x/ffffff/youtube-live.png" alt="">
+                    <h4 >Live</h4>
+                </div>
+                <div id="likedVid" style="margin: 0px 0px 0px 26px;">
+                    <img src="https://img.icons8.com/material-outlined/344/ffffff/settings--v1.png" alt="">
+                    <h4>Setting</h4>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div id="tags">
+                <h4 style="background-color: #fff; color:black">All</h4>
+                <h4>Mixes</h4>
+                <h4>Music</h4>
+                <h4>Affairmations</h4>
+                <h4>Wealth</h4>
+                <h4>Universe</h4>
+                <h4>TED</h4>
+                <h4>Happiness</h4>
+                <h4>Live</h4>
+                <h4>Manifestation</h4>
+            </div>
+            <div id="videoContainer"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="main.js"></script>

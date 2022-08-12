@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    #movies{
+      width: 270px;
+      height: 300px;
+      border: solid 1px black;
+      overflow: scroll;
+    }
+    #movies > div {
+      width: 220px;
+      border-top: none;
+    }
+    div> img{
+      width: 180px;
+      height: 294px;
+    }
+    #errImg{
+      width: 180px;
+      height: 294px;
+    }
+  </style>
+  <body>
+    <h1>Fetch</h1>
+    <input oninput="debounce(main,1000)" type="text" id="query" />
+    <div id="movies">
+    </div>
+  </body>
+</html>
+<script src="index.js"></script>

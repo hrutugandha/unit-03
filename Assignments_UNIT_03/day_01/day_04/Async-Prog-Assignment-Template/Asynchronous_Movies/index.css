@@ -1,0 +1,211 @@
+#container {
+    height: 760px;
+    width:  100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffbc03;
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    margin: 0px;
+}
+#navbar{
+    height: 60px;
+    width: 98%;
+    display: flex;
+    flex-direction: row reverse wrap;
+    justify-content: flex-end;
+    padding: 10px;
+}
+#navbar > div{
+    width: 10%;
+    height: 100%;
+    margin: 0px;
+}
+.logo{
+    text-align: center;
+    margin: 0px;
+    color:  white;
+    display: flex;
+    background-color: #cf3f1c;
+    border-radius: 30px 0px 0px 30px;;
+}
+#navbar > .item-2{
+    flex-grow: 1;
+    background-color: #cf3f1c;
+}
+.logo > img{
+    width: 40%;
+    background-color: #D5BF86;
+    border-radius: 50px; 
+
+}
+.item{
+    background-color: #cf3f1c;
+    text-align: center;
+    margin: 0px;
+    color: white;
+}
+.item:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: white;
+    text-decoration: underline;
+}
+#slideshow > img{
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    margin-left: 70px;
+    border: px solid black;
+    border-radius: 30px 10px 30px 10px;
+}
+.item-1 > img{
+    
+    width: 40%;
+    background-color: #D5BF86;
+    border-radius: 50px; 
+}
+
+#slideshow{
+    height: auto;
+    width: 480px;
+    margin-left: 150px;
+    padding: 20px;
+    background-color: #e2451f;
+    background-repeat:no-repeat;
+    background-image: url("https://mollydookerwines.com.au/wp-content/themes/ma-mollydooker-theme/img/pages/home/home-hero-hand.png");
+    border-radius: 30px;;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#slideshow > img{
+    background-size: contain;
+}
+.title{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#search{
+    display: flex;
+}
+#sort-buttons{
+    width: 40%;
+    height: 400px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 100px;
+    text-align: center;
+    border-radius: 30px;
+    justify-content:center;
+    background-repeat:no-repeat;
+    background-size: auto;
+    background-image: url("https://mollydookerwines.com.au/wp-content/uploads/2020/08/home-difference-island.png")
+}
+#search-box > img{
+    background-size: cover;
+    margin: auto;
+}
+#search-box {
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+#search-box > #searchMovie{
+    height: 20px;
+    width: 300px;
+    align-items: center;
+    margin: auto;
+    margin-top: 70px;
+}
+.search{
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 80px;
+    background-color: #333628;
+    border-radius: 50px;
+}
+.search > input{
+    margin: auto;
+    padding: 10px;
+    width: 300px;
+    border-radius: 30px;
+    border: 0px;
+    margin-left: 40px;
+    margin-top: 60px;
+
+}
+.search > button{
+    width: 150px;
+    margin: 20px;
+    padding: 8px;
+    margin-left: 120px;
+    border: 0px;
+    border-radius: 30px;
+    background-color: #cf3f1c;
+    color: #fff;
+    margin-top: 20px;
+}
+#movies{
+    font-family: 'Kanit', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    grid-gap: 20px;
+    align-items: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: #aa0e23;
+    background-image: url("https://mollydookerwines.com.au/wp-content/themes/ma-mollydooker-theme/img/pages/home/home-club-peacock-fronds.png");
+}
+#movies > div{
+    height: 360px;
+    padding: 10px;
+    width: 360px;
+    margin: auto;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #dd696d;
+    text-align: center;
+    margin-top: 40px;
+    border-radius: 30px;
+    border: 1px solid #333628;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+div > img{
+    margin-top: 20px;
+    background-size: cover;
+    overflow: hidden;
+    height: 200px;
+    width: 100%;
+    border-radius: 30px;
+}
+#sort-filter{
+    background-color: #aa0e23;;
+    align-items: right;
+    justify-content: right;
+}
+div > h5,p{
+    margin: 0px;
+}
+#searchBox{
+    border: solid 1px black;
+    margin: auto;
+    color: #fff;
+    overflow: scroll;
+    height: 400px;
+    width: 400px;
+  }
+  #searchBox div:hover{
+    background-color: #cf3f1c;
+  }
+  #searchBox > div{
+    text-align: center;
+    justify-content: center;
+  }
+
+#searchBox img {
+    height: 325px;
+    width: 200px;
+    background-size: contain;
+}

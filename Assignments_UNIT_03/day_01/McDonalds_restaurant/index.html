@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <select name="food" id="food">
+        <option value="burger">Burger</option>
+        <option value="pizza">Pizza</option>
+        <option value="frenchfries">French Fries</option>
+    </select>
+
+    <button onclick="order()">Order</button>
+</body>
+</html>
+<script>
+
+    function order(){
+        let status = "open"
+        
+        let order = document.getElementById("food").value;
+
+        let time = Math.round(Math.random() * 5);
+
+        let food_promise = new Promise(function(res,rej){
+            setTimeout(function(){
+                if(status == "open"){
+                    res (`Your ${order} is Ready!`);
+                }else{
+                    rej(`Sorry, Closed for today :((`)
+                }
+            },time*1000)
+        });
+
+        food_promise.then(function(res){
+            console.log(res)
+        })
+
+        food_promise.catch(function(err){
+            console.log(err)
+        })
+        
+        }
+</script>

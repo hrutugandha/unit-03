@@ -1,0 +1,130 @@
+#container{
+    height: 760px;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fff1e6;
+    background-repeat: no-repeat;
+    justify-content:center;
+    align-items:center;
+}
+body{
+    margin: 0px;
+}
+#header{
+    height: 62px;
+    width: 100%;
+    background-color: #3d405b;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+#img{
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683__340.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-color: #fff1e6;
+}
+#header > h1{
+    color: #edf2f4;
+    margin: 16px 0px 10px 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ #searchbar{
+    height: 70px;
+    width: 260px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 30px 20px 10px 30px;
+    background-color: #a8dadc;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.searchbar{
+    display: flex;
+}
+.searchbar > #city{
+    height: 40px;
+    margin: auto;
+    border: 0px;
+    border-radius: 30px 10px 10px 30px;
+    text-align: center;
+}
+.searchbar > #button {
+    height: 40px;
+    margin: auto;
+    border: 0px;
+    width: 70px;
+    border-radius: 30px;
+    color: #edf2f4;
+    background-color: #457b9d;
+}
+#weather > div{
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    line-height: 20px;
+    margin-left: 300px;
+    margin-bottom: 0px;
+}
+#gmap_canvas{
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 50px 40px 50px 40px;
+    margin-left: 500px;
+}
+#forecast{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    background-color: #ffcfd2;
+    width: 100%;
+}
+#weather{
+    height: 500px;
+    width: 500px;
+}
+#forecast > div{
+    text-align: center;
+    background-color: #cfbaf0;
+    height:  350px;
+    width: 200px;
+    border-radius: 20px 10px 30px 10px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#head > h1{
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+#forecast > h4{
+    margin: 0;
+}
+
+@media only screen and (min-width:0px) and (max-width:360px){
+    #forecast{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        justify-content: center;
+        background-color: #ffcfd2;
+        width: 100%;
+    }
+}
+@media only screen and (min-width:361px) and (max-width:720px){
+    #forecast{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+        justify-content: center;
+        background-color: #ffcfd2;
+        width: 100%;
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Form</title>
+    <style>
+        #container {
+            height: auto;
+            margin: 0 auto;
+            width: 100%;
+            font-family: "Helvetica Neue",Helvetica;
+            color: white;
+        }
+        #form{
+            margin: 0 auto;
+            height: auto;
+            width: 350px;
+        }
+        #form > div,h1{
+            text-align: center;
+            line-height: 80px;
+            margin: 0 auto;
+            padding:  10px;
+        }
+        #submit{
+            padding:  10px;
+            background-color: #00af54;
+            color: white;
+        }
+        #name_section{
+            background-color: #cdb4db;
+        }
+        #number_section{
+            background-color: #ffc8dd;
+        }
+        #city_section{
+            background-color: #e5e5e5;
+        }
+        #submit_section{
+            background-color: #bbd0ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+      <form>
+        <div id="form">
+            <h1 style="margin: 0;  background-color: #f9dc5c;">Student Form</h1>
+            <div id="name_section">
+                Name: <input type="text" id="name" placeholder="Enter name"/>
+            </div>
+            <div id="number_section">
+                Number: <input type="number" id="number" placeholder="Enter number"/>
+            </div>
+            <div id="city_section">
+                City: <input type="text" id="city" placeholder="Enter city"/>
+           </div>
+           <div id="submit_section">
+            <input type="submit" value="Submit" id="submit" onclick="storeuser()"/>
+           </div>
+        </div>
+      </form>
+    </div>
+</body>
+</html>
+<script>
+
+document.querySelector('form').addEventListener('submit',storeuser);
+
+        function storeuser(){
+            event.preventDefault();
+
+            let student = {
+                'name': document.getElementById('name').value,
+                'city': document.getElementById('city').value,
+                'number': document.getElementById('number').value
+            }
+
+            let user = localStorage.getItem('student');
+
+            if(user == null){
+                user = [];
+            }else{
+                user = JSON.parse(localStorage.getItem('student'))
+            }
+
+            user.push(student);
+            console.log(student)
+
+            localStorage.setItem('student', JSON.stringify(user))
+            alert("Submitted Successfully!");
+        }
+
+        function retrieve(){
+            var myData = localStorage.getItem('student');
+            console.log(myData)
+        }
+        retrieve()
+
+
+</script>

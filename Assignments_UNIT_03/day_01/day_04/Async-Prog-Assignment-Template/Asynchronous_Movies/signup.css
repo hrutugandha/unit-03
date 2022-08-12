@@ -1,0 +1,76 @@
+#container {
+    height: 760px;
+    width:  100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ffbc03;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;}
+body{
+    margin: 0px;
+}
+#navbar{
+    height: 60px;
+    width: 98%;
+    display: flex;
+    flex-direction: row reverse wrap;
+    justify-content: flex-end;
+    padding: 10px;
+}
+#navbar > div{
+    width: 10%;
+    height: 100%;
+    margin: 0px;
+}
+.logo{
+    color: #FFF;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    background-color: #cf3f1c;
+    border-radius: 30px 0px 0px 30px;;
+}
+#navbar > .item-2{
+    flex-grow: 1;
+    background-color: #cf3f1c;
+}
+.logo > img{
+    width: 40%;
+    border-radius: 50px; 
+}
+.item{
+    background-color: #cf3f1c;
+    text-align: center;
+    margin: 0px;
+    color: white;
+}
+.item:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: white;
+    text-decoration: underline;
+}
+form{
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #cf3f1c;
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#signup-form-div > input{
+    text-align: center;
+    padding: 10px;
+    width:  80%;
+    margin-top: 33px;
+    margin-left: 20px;;
+    border-radius: 16px;
+}
+#submit{
+    background-color: #ffbc03;
+    color: #FFF;
+    font-size: 20px;
+}
+.bgColor{
+    background-color: #f8f9fa;
+}

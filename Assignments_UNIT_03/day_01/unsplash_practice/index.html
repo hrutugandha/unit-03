@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 700px;
+            width: 100%;
+            display: flex;
+            border: 1px solid red;
+        }
+        #sidebar{
+            flex: 2;
+            border: 1px solid red;
+        }
+        #main{
+            flex: 8;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+        }
+        #random:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <div>Menu</div>
+            <div>Login</div>
+            <div>Signup</div>
+            <div>Search<input type="text" name="" id="search" ></div>
+            <div id="random" onclick="window.location.href ='random.html' ">Random</div>
+        </div>
+        <div id="main"></div>
+    </div>
+</body>
+</html>
+<script src="main.js">
+
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <link rel="stylesheet" href="index.css">
+
+    <body>
+       <div id="container">
+           <!--------------------Navbar------------------>
+            <nav id="navbar">
+                <div class="logo" class="item-1" onclick="window.location.href='index.html'" class="item">
+                    <img  src="https://th.bing.com/th/id/OIP.aaQP2oFTCNw_UE4wd_0oXgHaG_?w=184&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" style="width: 200px; height: 60px; margin-top: 1px;">
+                    <h3 style="font-size: 18px; text-align: center; margin-left: 8px;">anime.net</h3>
+                </div>
+                <div class="item-2"></div>
+                <div class="item" class="item-2" onclick="window.location.href='index.html'"><h3>home</h3></div>
+                <div class="item" class="item-3" onclick="window.location.href='login.html'"><h3>login</h3></div>
+                <div class="item" class="item-4" onclick="window.location.href='signup.html'"><h3>signup</h3></div>
+            </nav>
+            <div id="search">
+                 <!---------------Slideshow--------------->
+                <div id="slideshow" onload="start()"> 
+                    <h1 class="title">Recent releases</h1>
+                    <img src="" alt="" id="slideshow_img">
+                    <h4 class="title" id="name"></h4>
+                    <p class="title" id="rating"></p>
+                </div>
+                <!-------------Add sorting here----------------->
+                <div id="sort-buttons">
+                    <h1 id="errortag" style="margin: 0px"></h1>
+                <div class="search" id="search-box">
+                    <input placeholder="Search..." id="searchMovie" oninput="debounce(searchMovie,1000)" type="text" />
+                    <div id="searchBox" ></div>
+                </div>
+                </div>
+          </div>
+              <!------------------Show list of movies here----------------------->
+              </div>
+              <div id="sort-filter">
+                <select name="sort" id="sortButton" onchange="sortmov()" >
+                  <option value="">SORT</option>
+                  <option value="asc" id="asc">Low to High</option>
+                  <option value="desc" id="desc">High to Low</option>
+                </select>
+              </div>
+            <div id="movies" onchange="sort()" onload="showMovie()">
+            </div>
+       </div>
+    </body>
+
+</html>
+<script src="index.js">
+
+
+</script>

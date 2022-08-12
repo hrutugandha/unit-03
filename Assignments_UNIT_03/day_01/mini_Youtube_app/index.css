@@ -1,0 +1,229 @@
+body{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+}
+#container{
+    height: 56px;
+    padding: 0 16px 0px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #202020;;
+}
+#emptyDiv{
+    flex: 2;
+}
+#start{
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    height: 3.2rem;
+    margin: auto;
+    margin-right: 40px;
+}
+#centre{
+    flex: 6;
+    display: flex;
+    flex-direction: row;
+    height: 3.2rem;
+    justify-content: space-between;
+    margin: auto;
+}
+#end{
+    flex: 2;
+    display: flex;
+    flex-direction: row left;
+    height: 3.2rem;
+    justify-content: center;
+    background-color: #303030;
+}
+#menu-icon{
+    flex: 1;
+    padding: 0px 2px;
+    background-color: #202020;;
+
+}
+#menu-icon > img{
+    width: 36px;
+    height: 36px; 
+    margin:10px 0px 10px 40px
+}
+#youtube-icon{
+    flex: 1;
+    background-color: #202020;;
+}
+#youtube-icon > img{
+    width: 36px;
+    height: 36px; 
+    margin: 10px 90px 10px 0px
+}
+#centre > #searchbar{
+    flex: 6;
+    height: 3.2rem;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+#searchbar > #search{
+    flex: 1; 
+    font-size: large;
+    margin: auto;
+    height: 2rem;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #121212;
+    border: 0px;
+    color: #fff;
+}
+#centre > #search-icon{
+    flex: 1; 
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #303030;
+    margin: 10px 0px 0px 10px;
+    padding: 0px;
+    width: 100%;
+}
+#search-icon > img{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: auto;
+    background-color: #202020;
+}
+#end > #videocam {
+    flex: 1;
+}
+#end > #boxicon{
+    flex: 1;
+}#end > #bellicon{
+    flex: 1;
+}#end > #pofileimg{
+    flex: 1;
+}
+#end img{
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    margin: auto;
+    margin: 10px 5px 5px 12px;
+}
+#body{
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+#body > #sidenav{  
+    background-color: #212121; 
+    color: #fff; 
+    margin: 0 auto;
+    height: 100%;
+    width: 270px;
+}
+#body > #main{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+#sidenav{
+    display: flex;
+    flex-flow: column wrap;
+}
+#sidenav > #item-01{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;;
+}#sidenav > #item-02{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+#sidenav > #item-03{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}#item-01 div{
+    flex: 2;    
+    display: flex;
+    text-align: center;
+    align-items: center;    
+    justify-content: space-evenly;
+}#homeicon > img{
+    height: 20px;
+    width: 20px;
+}#exploreicon > img{
+    height: 20px;
+    width: 20px;
+}#subicon > img{
+    height: 20px;
+    width: 20px;
+}#item-02 div{
+    flex: 1;    
+    display: flex;
+    text-align: center;
+    align-items: center;  
+    justify-content: left;
+    margin-left: 26px;;
+}#item-02 img{
+    height: 20px;
+    width: 20px;   
+    margin: 0;padding: 0;
+}
+#item-02 h4{
+    margin: 0px 0px 0px 20px;
+}#item-03 div{
+    flex: 1;    
+    display: flex;
+    text-align: center;
+    align-items: center;  
+    justify-content: left;
+    margin-left: 26px;
+}#item-03 img{
+    height: 20px;
+    width: 20px;   
+    margin: 0px; 
+}
+#item-03 h4{
+    margin: 0px 0px 0px 20px;
+}
+.item{
+    padding: 0px;
+    margin: 0px;
+}
+#main > #tags{
+    height: 68px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;    
+    flex-wrap: wrap;
+    background-color: #181818; 
+
+}
+#main > #videoContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    margin: 8px 8px 0px 8px;
+}
+#tags h4{
+    flex: 2; 
+    padding: 10px 0px 10px 0px;
+    font-size: medium;
+    margin: 20px 10px 0px 10px;
+    line-break: none;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    height: 27%;
+    color: #fff;
+    background-color: #353535;
+}
+#videoCard > img{
+    width: 100%;
+}
+

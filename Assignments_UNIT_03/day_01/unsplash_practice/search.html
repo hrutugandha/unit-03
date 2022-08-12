@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+            #main{
+            flex: 8;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+</body>
+</html>
+<script>
+
+let parent = document.getElementById("main");
+let search_term = localStorage.getItem("search_term");
+
+async function getImages(){
+
+  try{
+
+    let res = await fetch(`https://api.unsplash.com/search/photos?query=${search_term}&client_id=5VOulHaa8LTvlW6KES4GX0FR7ivMWaEqCMZWRnAAqPc`);
+
+    let data = await res.json();
+
+    appendImages(data.results,parent);
+    return data;
+
+  }
+  catch(err){
+      console.log(err);
+  }
+}
+getImages();
+
+ function appendImages(data,parent){
+
+    console.log(data);
+    data.forEach(function(elem){
+
+        let div = document.createElement('div');
+        div.id = 'pictures';
+
+        let img = document.createElement('img');
+        img.src = elem.urls.small;
+
+        let user = document.createElement("p");
+        user.innerHTML = elem.user.name;
+
+        div.append(img,user);
+        parent.append(div);
+    })
+
+ };
+</script>
